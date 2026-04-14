@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+}
+
+tr {
+    background-color:blue;
+}
+
+td {
+    padding: 15px;
+    background-color:yellow;
+}
+
+th {
+    padding: 15px;
+    color:white;
+}
+
+a {
+    color:black;
+}
+
+body {
+    background-color: purple;
+}
+
+button {
+    background-color:cyan;
+    border: 2px solid;
+    border-color:rgb(255, 61, 94);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 30px;
+}

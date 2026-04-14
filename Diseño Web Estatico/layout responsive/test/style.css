@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    display: grid;
+
+    grid-template-rows: auto 1fr auto ;
+    grid-template-columns: 200px 1fr;
+    height: 100vh;
+    
+}
+
+nav {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    padding: 20px;
+    gap: 15px;
+    flex-direction: column;
+    background-color: rgb(168, 253, 211);
+}
+
+
+header {
+background-color: lightblue;
+grid-column: 1 / 3;
+}
+
+
+main {
+background-color: lightgray;
+}
+
+footer {
+background-color: lightgreen;
+grid-column: 1 / 3;
+}
+
+@media (max-width: 768px) {
+ body {
+ /* Pasamos de 2 columnas a 1 */
+ grid-template-columns: 1fr;
+ /* Cambiamos la distribución en filas */
+ grid-template-rows: 80px 100px 1fr 60px;
+ }
+ background-color: red;
+}
