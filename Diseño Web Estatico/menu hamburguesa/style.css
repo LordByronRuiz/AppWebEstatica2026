@@ -23,12 +23,11 @@ body {
 }
 
 header {
-    background-color: #b5d2e6;
+    background-color: white;
     grid-column: 1 / 3;
     text-align: center;
-    color: brown;
+    color: black;
     padding: 10px;
-    display: flex;
     align-items: center;
 }
 
@@ -41,7 +40,7 @@ header {
 }
 
 nav {
-    background-color: #326080;
+    background-color: #ffe976;
     grid-column: 1;
     grid-row: 2;
     display: flex;
@@ -51,18 +50,18 @@ nav {
 }
 
 .item {
-    background: rgb(134, 2, 2);
+    background: #fb9630;
     padding: 15px;
     border: 1px solid #333;
     text-align: center;
-    color: aquamarine;
+    color: black;
     cursor: pointer;
     transition: background 0.3s;
     position: relative;
 }
 
-.item:hover, .item.active {
-    background: rgb(180, 2, 2);
+.item:hover{
+    background: #c47323;
 }
 
 .submenu {
@@ -70,7 +69,7 @@ nav {
     list-style: none;
     padding: 0;
     margin: 10px 0 0 0;
-    background: #254a63;
+    background:#e28221;
 }
 
 .submenu li {
@@ -83,18 +82,18 @@ nav {
 }
 
 main {
-    background-color: beige;
+    background-color: #fb9630;
     grid-column: 2;
     grid-row: 2;
     padding: 20px;
-    color: brown;
+    color: #000a15;
 }
 
 footer {
-    background-color: #805232;
+    background-color: #070033;
     grid-column: 1 / 3;
     text-align: center;
-    color: aquamarine;
+    color: white;
 }
 
 @media (max-width: 1024px) {
