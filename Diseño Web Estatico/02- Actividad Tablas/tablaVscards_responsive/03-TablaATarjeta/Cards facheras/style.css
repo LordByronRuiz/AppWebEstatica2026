@@ -90,7 +90,7 @@ body {
 }
 
 .carta:hover {
-  border: 1px solid black;
+  border: 4px dotted black;
   transform: scale(1.05);
 }
 
