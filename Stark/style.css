@@ -1,0 +1,241 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* HEADER HERO - Versión grande (como Nude Project) */
+.hero-header {
+    background-color: #b5d2e6;
+    text-align: center;
+    color: brown;
+    position: relative;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 100;
+}
+
+/* Estado grande - ocupa toda la pantalla */
+.hero-header.hero-mode {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-header.hero-mode .main-title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    animation: fadeInUp 0.6s ease-out;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Estado pequeño - como sticky header de Nude Project */
+.hero-header.small-mode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #b5d2e6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0.75rem 2rem;
+    text-align: left;
+    min-height: auto;
+    transform: translateY(0);
+}
+
+.hero-header.small-mode .header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-header.small-mode .main-title {
+    font-size: 1.25rem;
+    margin: 0;
+    animation: none;
+    display: inline-block;
+}
+
+/* NAVEGACIÓN - Sticky como en Nude Project */
+.main-nav {
+    background-color: #326080;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    transition: all 0.3s ease;
+}
+
+/* Cuando el header está fijo, el nav se posiciona correctamente */
+body.has-fixed-header .main-nav {
+    position: sticky;
+    top: 60px; /* Altura del header pequeño */
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+}
+
+.logo-placeholder {
+    color: aquamarine;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: aquamarine;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.item {
+    background: rgb(134, 2, 2);
+    padding: 12px 20px;
+    border: 1px solid #333;
+    text-align: center;
+    color: aquamarine;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    font-size: 0.9rem;
+}
+
+.item:hover {
+    transform: scale(1.02);
+    background: rgb(100, 0, 0);
+}
+
+/* MAIN CONTENT */
+main {
+    background-color: beige;
+    padding: 40px 20px;
+    color: brown;
+    position: relative;
+    z-index: 1;
+}
+
+main h1 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #805232;
+    text-align: center;
+    color: aquamarine;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- RESPONSIVE --- */
+/* Tablets */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #326080;
+        padding: 1rem;
+        gap: 0.5rem;
+        z-index: 100;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-menu .item {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-header.hero-mode .main-title {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+    
+    .hero-header.small-mode {
+        padding: 0.5rem 1rem;
+    }
+    
+    .hero-header.small-mode .main-title {
+        font-size: 1rem;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+        min-height: 50px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .hero-header.small-mode .main-title {
+        font-size: 0.9rem;
+    }
+    
+    .item {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+    .hero-header.small-mode .header-content,
+    .nav-container {
+        max-width: 1400px;
+    }
+}
+
+/* Ajuste de padding del body cuando el header está fijo */
+body.has-fixed-header {
+    padding-top: 0;
+}
+
+/* Transición suave para el padding del body */
+body {
+    transition: padding-top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
