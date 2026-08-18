@@ -1,0 +1,400 @@
+/* ===== RESET Y BASE ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: whitesmoke;
+    color: #2d1b69;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+}
+
+a {
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #2764e9 0%, #38bdf8 100%);
+    color: #fff;
+    grid-column: 1 / -1;
+}
+
+.header .marca h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.header .lema {
+    margin: 0.35rem 0 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.header-links a {
+    display: inline-block;
+    padding: 0.75rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+.header-links a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    text-decoration: none;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.nav-cambio {
+    display: none;
+}
+
+.barra {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+}
+
+.hamburgesa {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    border: 2px solid #2d1b69;
+    background: #8b1a1a;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.hamburgesa span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    margin: 4px 0;
+    background: #f5f5dc;
+    border-radius: 999px;
+}
+
+/* ===== MENÚ ===== */
+.menu-vertical {
+    background: #8b1a1a;
+    padding: 1.5rem;
+    border: 1px solid #2d1b69;
+    border-radius: 20px;
+}
+
+.menu-vertical h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #f5f5dc;
+}
+
+.menu-vertical ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-vertical a {
+    display: block;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    color: #f5f5dc;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.menu-vertical a:hover,
+.menu-vertical a:focus,
+.menu-vertical a.activo {
+    background: #c0392b;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+/* ===== MAIN ===== tiene que tener un lugar definido en el cuerpo (tablavsgrid pdf2)*/
+main {
+    display: grid;
+    gap: 1.5rem;
+    align-content: start;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.hero article h2 {
+    margin-top: 0;
+    font-size: clamp(2rem, 2.8vw, 3rem);
+    line-height: 1.05;
+}
+
+.destacado {
+    color: #2e7d32;
+}
+
+.hero article p {
+    line-height: 1.75;
+    margin: 1rem 0;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.links a {
+    display: inline-block;
+    padding: 0.9rem 1.4rem;
+    border-radius: 999px;
+    background: #7b2fbe;
+    color: #fff;
+    font-weight: 600;
+}
+
+.links a:hover {
+    background: #5a1f8a;
+    text-decoration: none;
+}
+
+.hero-imagen {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid #2d1b69;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.hero-imagen img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.hero-imagen figcaption {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #2d1b69;
+}
+
+/* ===== EMPRESA INFO ===== */
+.empresa-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.empresa-info article {
+    padding: 1.5rem;
+    border: 1px solid #2d1b69;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.empresa-info h3 {
+    margin-top: 0;
+    color: #2d1b69;
+}
+
+.empresa-info ul {
+    list-style: disc inside;
+    margin: 0.75rem 0 0;
+    padding-left: 1rem;
+}
+
+/* ===== SERVICIOS GRID ===== */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.servicio-card {
+    background: white;
+    border: 1px solid #2d1b69;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.servicio-card h3 {
+    margin: 15px;
+}
+
+.servicio-card p {
+    margin: 0 15px 20px;
+    line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+.sitio-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: #0f172a;
+    color: #f8fafc;
+    grid-column: 1 / -1;
+}
+
+.footer-info p {
+    margin: 0.35rem 0;
+}
+
+.footer-info a {
+    color: #c7d2fe;
+}
+
+.footer-info a:hover {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #c7d2fe;
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 960px) {
+    .layout {
+        grid-template-columns: 1fr;
+        padding: 1.25rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .empresa-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .marca h1 {
+        font-size: 1.4rem;
+    }
+
+    .hamburgesa {
+        display: flex;
+    }
+
+    .menu-vertical {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        padding: 0 1.5rem;
+    }
+
+    .nav-cambio:checked ~ .layout .menu-vertical {
+        max-height: 500px;
+        padding: 1.5rem;
+    }
+
+    .barra {
+        background: transparent;
+        box-shadow: none;
+        position: relative;
+    }
+
+    .menu-vertical {
+        border-radius: 18px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .hero article h2 {
+        font-size: 2rem;
+    }
+
+    .hero-imagen {
+        width: 100%;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sitio-footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}

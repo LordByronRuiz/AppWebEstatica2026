@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario de inscripción a un curso</h1>
+    </header>
+
+    <main>
+        <form>
+                <label>Nombre</label><br>
+                <input type="text"><br><br>
+                <label>Apellido</label><br>
+                <input type="text"><br><br>
+                <label>Correo electrónico</label><br>
+                <input type="email"><br><br>
+                <label>Edad</label><br>
+                <input type="number"><br><br>
+                <label>Contraseña</label><br>
+                <input type="password"><br><br>
+
+                <br>
+
+                <label>Seleccione un curso</label>
+                <br> 
+                <select>
+                    <option>Desarrollo web</option>
+                    <option>Programación</option>
+                    <option>Bases de datos</option>
+                </select>
+
+                <br><br>
+                <label>Conocimientos previos</label>
+                <br>
+                <input type="checkbox"> HTML
+                <input type="checkbox"> CSS
+                <input type="checkbox"> JavaScript
+
+                <br><br>
+                <label>Modalidad</label>
+                <br>
+                <input type="radio" name="modalidad"> 
+                Presencial
+                <input type="radio" name="modalidad">
+                Virtual
+                <input type="radio" name="modalidad">
+                Híbrida
+
+                <br><br>
+
+                <textarea>Completar todos los datos antes de enviar.</textarea> <br><br>
+
+                <button> Enviar</button>
+                <br>
+        </form>
+        <br>
+        <h2>Pequeña reflexión</h2> <br>
+        <h3>1. ¿Por qué utilizaste radio para la modalidad y checkbox para los
+        conocimientos previos?</h3>
+        <p>Porque para la modalidad se elige opción única, mientras que los conocimientos previos pueden ser muchos o ninguno.</p>
+        <br>
+        <h3>2. ¿Para qué se utiliza la etiqueta label?</h3>
+        <p>Para asociar un texto con un elemento del formulario.</p>
+        <h3>¿Qué diferencia existe entre input type="text" e input type="email"?</h3>
+        <p>El input type="email" valida que el valor ingresado sea una dirección de correo electrónico válida y el input type="text" no valida nada en específico.</p>
+
+    </main>
+ </body>
+</html>

@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: black;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: darkslategrey;
+    color: white;
+    padding: 20px 40px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color:black;
+}
+
+nav ul {
+    list style: none;
+    marginn: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: lightskyblue;
+}
+
+
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e3e9f1;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+.listaServicios {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+
+.gridServicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 10px 0;
+    color: #19242e;
+}
+
+.card p {
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #3097db;
+}
+
+
+footer {
+    background-color:#18222b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
