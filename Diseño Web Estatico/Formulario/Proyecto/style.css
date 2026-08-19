@@ -1,0 +1,68 @@
+body{
+ background-color: #f2f2f2;
+}
+
+header{
+    background-color: #4daf50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+input, select, textarea{
+ padding: 10px;
+ box-sizing: border-box;
+}
+
+button{
+ background-color: blue;
+ color: white;
+ padding: 12px;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+}
+
+button:hover{
+ background-color: darkblue;
+}
+
+.datos-personales, .datos-academicos{
+ border: 1px solid gray;
+ padding: 20px;
+ margin-bottom: 20px;
+ border-radius: 10px;
+}
+
+form{
+ width: 500px;
+ padding: 10px;
+ margin: auto;
+ background-color: white;
+ box-shadow: 0 0 10px darkblue;
+ border-radius: 10px;
+}
+
+.reflexion{
+    width: 500px;
+    padding: 10px;
+    margin: auto;
+    background-color: rgb(173, 228, 173);
+    box-shadow: 0 0 10px black;
+    border-radius: 15%;
+    padding:30px;
+}
+.reflexion h2{
+    text-align: center;
+    box-shadow: 0 0 10px green;
+    border-radius: 50%;
+    margin-left:100px;
+    margin-right:100px;
+    padding:20px;
+}
+
+img{
+    display: block;
+    margin: auto;
+}
